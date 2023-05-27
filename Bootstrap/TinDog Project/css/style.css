@@ -1,0 +1,112 @@
+:root {
+    --gold-gradient:
+        radial-gradient(ellipse farthest-corner at left bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+        radial-gradient(ellipse farthest-corner at right top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+}
+
+.gradient-background {
+  background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+
+.bg-gold h4 {
+    font-family: 'Times New Roman',serif;
+    letter-spacing: 2px;
+    font-weight: 900;
+  }
+
+.bg-gold h1 {
+    font-family: 'Times New Roman',serif;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.bg-gold * {
+    color: black;
+} 
+  
+.bg-gold {
+    outline: 5px solid #5d4a1f23;
+    outline-offset: -5px;
+    background: var(--gold-gradient);
+    margin: 0;
+    border: 0;
+}
+
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shine {
+  0% {
+      background-position: 0% 0%;
+  }
+  25% {
+      background-position: 100% 0%;
+  }
+  50% {
+      background: none;
+  }
+}
+
+.icon-square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+}
+
+.logos {
+    height: 30px;
+}
+
+.profile-img {
+    height: 100px;
+    border-radius: 50%;
+}
+
+.pebbles {
+    font-size: 20px;
+}
+
+#shine {
+  background: linear-gradient(225deg, transparent 40%, rgb(238, 225, 159) 50%, transparent 60%);
+  background-size: 400% 100%;
+  animation: shine 5s ease-in-out infinite;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    h4 {
+        font-size: 26px;        
+      }
+    
+    .bg-gold ul {
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
+
+    .bg-gold h1 {
+        margin-bottom: 0px;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .bg-gold ul {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .bg-gold h1 {
+        margin-bottom: 2px;
+    }
+}
